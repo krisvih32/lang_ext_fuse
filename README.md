@@ -9,4 +9,5 @@ call /Users/Andrew/programs/test.c *nix false example_func<br>
 this line would execute the function example_func from the *nix path "/Users/Andrew/programs/test.c"<br>
 call c:\Users\Andrew\Desktop\test.c drive true<br>
 the "drive true" path might seem confusing, but it's just a type of file path most commonly used on windows<br>
-### Path Types
+### Path Types<br>
+#### Mac<br>
