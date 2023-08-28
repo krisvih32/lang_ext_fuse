@@ -21,7 +21,6 @@ char* read(int buffer_size, char *filename, char *mode, int *error_ptr) {
     }
     if (ret==true){
         fread(cur, sizeof(char), buffer_size, fp);
-        fseek(fp, 0, SEEK_CUR);
         fclose(fp);
     }
     return buffer;
