@@ -1,25 +1,43 @@
 # lang_ext_fuse
-# The intent of this programming language is to use different snippets from c, go, and python.<br>
+## Overview
+The intent of this programming language is to use different snippets from c, go, and python.<br>
 ## Functions
 ### func call
-#### Calling
-call path full function ( optional )<br>
+The function `call` allows the user to call a function or full file from a C, go or python file.
+```
+call <path> <full> [function]
+path: Path of the file containing the function.
+full: Indicates whether the full file should be executed
+      true: execute full file
+      false: execute a single function from the file
+function: Name of function to execute if `full` is false.
+      Optional.
+```
 #### Examples
-##### 1.
-call /Users/Andrew/programs/test.c false example_func<br>
-This will execute the function example_func from the path "/Users/Andrew/programs/test.c".<br>
-##### 2.
-call c:\Users\Andrew\Desktop\test.c true<br>
-This will execute the file from the path "c:\Users\Andrew\Desktop\test.c".
-## ret
-#### Calling
+Execute the function example_func from the file "/Users/Andrew/programs/test.c".
+```
+call /Users/Andrew/programs/test.c false example_func
+```
+
+Execute the full contents of the file "c:\Users\Andrew\Desktop\test.c".
+```
+call c:\Users\Andrew\Desktop\test.c true
+```
+
+## func ret
+The function `ret` allows the user to obtain the return value from executing the function `call`.
+```
 ret var_name
+```
 #### Examples
-##### 1.
+Execute the file from the path "c:\Users\Andrew\Desktop\test.c" and store it in test_ret.
+```
 call /Users/Andrew/programs/test.c false example_func<br>
 ret test_ret
-This will execute the file from the path "c:\Users\Andrew\Desktop\test.c" and store it in test_ret.
-##### 2.
+```
+
+Execute the file from the path "c:\Users\Andrew\Desktop\test.c" and store it in test_ret.
+```
 call c:\Users\Andrew\Desktop\test.c true<br>
 ret test_ret
-This will execute the file from the path "c:\Users\Andrew\Desktop\test.c" and store it in test_ret.
+``
