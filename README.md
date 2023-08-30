@@ -1,6 +1,7 @@
 # lang_ext_fuse
 # The intent of this programming language is to use different snippets from c, go, and python.<br>
-## call
+## Functions
+### func call
 #### Calling
 call path full function ( optional )<br>
 #### Examples
