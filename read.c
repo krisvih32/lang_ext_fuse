@@ -6,6 +6,7 @@
 
 
 char* read(int buffer_size, char *filename, char *mode, int *error_ptr) {
+    printf("in read");
     char* buffer=malloc(buffer_size*sizeof(char));
     char *cur = buffer;
 	printf("In read %s\n",filename);
@@ -21,6 +22,7 @@ char* read(int buffer_size, char *filename, char *mode, int *error_ptr) {
     }
     if (ret==true){
         fread(cur, sizeof(char), buffer_size, fp);
+        fseek(fp, 0, SEEK_CUR);
         fclose(fp);
     }
     return buffer;
