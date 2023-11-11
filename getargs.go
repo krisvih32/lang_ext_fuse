@@ -16,10 +16,12 @@ func getargs(argc int, argv []string) {
 			wd, err := os.Getwd()
 			if err != nil {
 				fmt.Printf("%+v\n", err)
+				os.Exit(1)
 			}
 			/*out*/ exec.Command("py", fmt.Sprintf("%s%s", wd, "error.py")).Output()
 			if err != nil {
 				fmt.Printf("error %d error number %o %x  : ", err, err, err)
+				os.Exit(2)
 			}
 			fmt.Printf("case 1: no detectable errors\n")
 		}
