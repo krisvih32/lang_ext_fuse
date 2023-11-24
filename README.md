@@ -40,4 +40,9 @@ Execute the file from the path "c:\Users\Andrew\Desktop\test.c" and store it in 
 ```
 call c:\Users\Andrew\Desktop\test.c true<br>
 ret test_ret
-``
+```
+## Supported Versions
+### OS
+Darwin
+### Architecture
+arm64
