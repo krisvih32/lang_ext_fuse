@@ -7,6 +7,6 @@ import (
 
 func main() {
 	fmt.Printf("in main")
-	getargs(len(os.Args), os.Args)
+	fmt.Printf(getargs(len(os.Args), os.Args))
 	return
 }
