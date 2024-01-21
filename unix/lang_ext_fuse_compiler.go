@@ -1,4 +1,4 @@
-package main
+package unix
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Printf("in main")
-	fmt.Printf(getargs(len(os.Args), os.Args))
+	args := getargs(len(os.Args), os.Args)
+	fmt.Printf("fileinput: %s\nfileoutput:%s\n", args.info.fileInput, args.info.fileOutput)
 	return
 }
